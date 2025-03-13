@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Tech do Gustavo Santos</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "101010011010101001010010110100101001010110101010010";
+            color: rgba(0, 255, 0, 0.07);
+            font-size: 100px;
+            position: absolute;
+            white-space: nowrap;
+            animation: moveBg 20s linear infinite;
+        }
+
+        @keyframes moveBg {
+            0% { top: -100px; left: 0; }
+            100% { top: 100%; left: 0; }
+        }
+
+        .calculator {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.5);
+            width: 320px;
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .display {
+            width: 95%;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #0f0;
+            font-size: 2em;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: right;
+            padding: 10px;
+            overflow: hidden;
+            white-space: normal;
+            line-height: 1.2;
+            word-wrap: break-word;
+            word-break: break-all;
+            height: auto;
+            max-height: 120px;
+            min-height: 50px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 1.2em;
+            background: #333;
+            color: #0f0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0f0;
+            color: #000;
+        }
+
+        .equal {
+            background-color: #ff5722;
+            color: #fff;
+        }
+
+        .equal:hover {
+            background-color: rgb(5, 244, 33);
+            color: #000;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Calculadora -->
+    <div class="calculator">
+        <div class="display" id="display"></div>
+        <div class="buttons">
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button onclick="append('/')">÷</button>
+
+            <button onclick="append('4')">4</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button onclick="append('*')">×</button>
+
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            <button onclick="append('-')">−</button>
+
+            <button onclick="append('0')">0</button>
+            <button onclick="append('.')">.</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="append('+')">+</button>
+
+            <button class="equal" style="grid-column: span 4;" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        Desenvolvido por Gustavo Santos © 2025
+    </footer>
+
+    <script>
+        const display = document.getElementById('display');
+        let resetDisplay = false;
+
+        function append(char) {
+            if (resetDisplay) {
+                display.textContent = '';
+                resetDisplay = false;
+            }
+            display.textContent += char;
+        }
+
+        function clearDisplay() {
+            display.textContent = '';
+            resetDisplay = false;
+        }
+
+        function calculate() {
+            try {
+                display.textContent = eval(display.textContent);
+            } catch {
+                display.textContent = 'Erro';
+            }
+            resetDisplay = true;
+        }
+    </script>
+
+</body>
+</html>
