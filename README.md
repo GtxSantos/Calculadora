@@ -20,34 +20,3 @@ Antes de rodar o projeto, certifique-se de ter o Python instalado no seu computa
 
 # Verificando a versão do Python:
 python --version
-
-#Passos
-Clone o repositório:
-
-git clone https://github.com/seu-usuario/seu-repositorio.git
-#Entre no diretório do projeto:
-
-cd Calculadora
-#(Opcional) Crie um ambiente virtual:
-
-python -m venv venv
-#Ative o ambiente virtual:
-
-#No Windows:
-
-.\venv\Scripts\activate
-#No macOS/Linux:
-
-source venv/bin/activate
-#Instale as dependências:
-
-
-pip install -r requirements.txt
-#Execute a aplicação:
-
-python app.py
-#Acesse no navegador: Abra o seu navegador e vá para:
-
-http://127.0.0.1:5000/
-
-
