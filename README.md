@@ -20,31 +20,3 @@ Antes de rodar o projeto, certifique-se de ter o Python instalado no seu computa
 
 ```bash
 python --version
-Passos para executar:
-Clone o repositório:
-
-bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-Navegue até o diretório do projeto:
-
-bash
-cd Calculadora
-Instale as dependências necessárias:
-
-bash
-pip install -r requirements.txt
-Execute a aplicação:
-
-bash
-Copiar
-Editar
-python app.py
-Abra o navegador e acesse:
-
-bash
-Copiar
-Editar
-http://127.0.0.1:5000/
-Autor
-Gustavo Santos
-GitHub
