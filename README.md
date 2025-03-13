@@ -1,7 +1,7 @@
 # Calculadora Tech
 
 ## Descrição
-Este é um projeto de uma **Calculadora Tech** desenvolvida utilizando **Python (Flask)** e com uma interface estilizada usando **HTML/CSS**. A aplicação permite realizar operações matemáticas básicas como soma, subtração, multiplicação e divisão.
+Este é um projeto de uma **Calculadora Web** desenvolvida utilizando **Python (Flask)** e com uma interface estilizada usando **HTML/CSS**. A aplicação permite realizar operações matemáticas básicas como soma, subtração, multiplicação e divisão.
 
 ## Funcionalidades
 - Realiza operações matemáticas básicas (soma, subtração, multiplicação, divisão).
