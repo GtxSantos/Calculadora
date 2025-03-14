@@ -38,9 +38,9 @@ cd Calculadora
 3. (Opcional) Crie um ambiente virtual:
 python -m venv venv
 
-source venv/bin/activate  # Linux/MacOS
+source venv/bin/activate # Linux/MacOS
+venv\Scripts\activate  # Windows
 
-venv\Scripts\activate     # Windows
 4. Instale as dependências:
 pip install -r requirements.txt
 
