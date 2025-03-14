@@ -29,5 +29,25 @@ A aplicação permite realizar operações matemáticas básicas, como **soma**,
 ### ✅ Pré-requisitos
 - Ter o **Python 3.x** instalado  
 (Verifique a versão com o comando abaixo):
-```bash
 python --version
+📦 Instalação
+1. Clone o repositório:
+bash''git clone https://github.com/GtxSantos/Calculadora.git
+2. Acesse a pasta do projeto:
+cd Calculadora
+3. (Opcional) Crie um ambiente virtual:
+python -m venv venv
+source venv/bin/activate  # Linux/MacOS
+venv\Scripts\activate     # Windows
+4. Instale as dependências:
+pip install -r requirements.txt
+Se não tiver um arquivo requirements.txt, instale apenas o Flask:
+pip install Flask
+▶️ Executando a aplicação
+No terminal, execute:
+python app.py
+Abra o navegador e acesse:
+http://127.0.0.1:5000/
+
+✉️ Contato
+Gustavo Santos - LinkedIn
