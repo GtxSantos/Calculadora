@@ -32,17 +32,22 @@ A aplicação permite realizar operações matemáticas básicas, como **soma**,
 python --version
 📦 Instalação
 1. Clone o repositório:
-bash''git clone https://github.com/GtxSantos/Calculadora.git
+git clone https://github.com/GtxSantos/Calculadora.git
 2. Acesse a pasta do projeto:
 cd Calculadora
 3. (Opcional) Crie um ambiente virtual:
 python -m venv venv
+
 source venv/bin/activate  # Linux/MacOS
+
 venv\Scripts\activate     # Windows
 4. Instale as dependências:
 pip install -r requirements.txt
-Se não tiver um arquivo requirements.txt, instale apenas o Flask:
+
+Se não tiver um arquivo requirements.txt, 
+instale apenas o Flask:
 pip install Flask
+
 ▶️ Executando a aplicação
 No terminal, execute:
 python app.py
