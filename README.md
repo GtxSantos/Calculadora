@@ -1,5 +1,5 @@
 💻 Calculadora Front-End com Design Neumórfico
-![Screenshot do Projeto](imagens/screenshot-projeto.png)
+![Screenshot do Projeto](./imagens/screenshot-projeto.png)
 
 📄 Descrição
 Este é um projeto de um site completo e responsivo, desenvolvido como parte da atividade MAPA da disciplina de Programação Front-End. A aplicação consiste em um site de 4 páginas para um profissional de tecnologia, cuja peça central é uma calculadora funcional com um design moderno e sofisticado (Neumorfismo). O projeto foi construído utilizando apenas HTML5, CSS3 e JavaScript puro (Vanilla JS), sem o uso de frameworks.
