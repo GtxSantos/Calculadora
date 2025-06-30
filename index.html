@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora Tech e portfólio de serviços de tecnologia de Gustavo Santos.">
+    <title>Calculadora Tech - Gustavo Santos</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">Gustavo Santos | Tech</a>
+        <nav class="navbar">
+            <button class="btn-menu" aria-label="Abrir Menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="menu-links">
+                <li><a href="index.html">Calculadora</a></li>
+                <li><a href="sobre.html">Sobre Mim</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content-calculator">
+
+        <div class="hero-section">
+            <h1>Calculadora Inteligente</h1>
+            <p>Uma ferramenta precisa e com um design elegante para os seus cálculos diários. Simples, rápida e eficiente.</p>
+        </div>
+
+        <div class="calculator-layout">
+
+            <div class="calculator">
+                <div class="display" id="display">0</div>
+                <div class="buttons">
+                    <button data-action="clear" id="clear">C</button>
+                    <button data-value="(">(</button>
+                    <button data-value=")">)</button>
+                    <button data-value="/" class="operator">÷</button>
+                    <button data-value="7">7</button>
+                    <button data-value="8">8</button>
+                    <button data-value="9">9</button>
+                    <button data-value="*" class="operator">×</button>
+                    <button data-value="4">4</button>
+                    <button data-value="5">5</button>
+                    <button data-value="6">6</button>
+                    <button data-value="-" class="operator">−</button>
+                    <button data-value="1">1</button>
+                    <button data-value="2">2</button>
+                    <button data-value="3">3</button>
+                    <button data-value="+" class="operator">+</button>
+                    <button data-value="0" style="grid-column: span 2;">0</button>
+                    <button data-value=".">.</button>
+                    <button data-action="calculate" id="equals" class="equal">=</button>
+                </div>
+            </div>
+
+            <aside class="calculator-sidebar">
+                <img src="https://placehold.co/120x120/007bff/ffffff?text=GS" alt="Foto de Gustavo Santos" class="profile-pic"> 
+                <h2>Criado por Gustavo Santos</h2>
+                <p>Este projeto foi desenvolvido com foco em design limpo e código eficiente, utilizando apenas HTML, CSS e JavaScript puros.</p>
+                <a href="sobre.html" class="cta-button-sidebar">Saiba Mais Sobre Mim</a>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Desenvolvido por Gustavo Santos © 2025</p>
+    </footer>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

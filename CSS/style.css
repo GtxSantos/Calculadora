@@ -1,0 +1,371 @@
+/* --- FONTES E VARIÁVEIS GLOBAIS (ESTILO NEUMÓRFICO) --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+:root {
+    --cor-fundo: #E0E5EC;
+    --cor-texto-principal: #555;
+    --cor-texto-secundario: #a3a3a3;
+    --cor-destaque: #007BFF;
+    --sombra-externa: 10px 10px 20px #a3b1c6, -10px -10px 20px #ffffff;
+    --sombra-interna: inset 7px 7px 15px #a3b1c6, inset -7px -7px 15px #ffffff;
+}
+
+/* --- ESTILOS DE BASE (RESET) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- LAYOUT PRINCIPAL (HEADER, MAIN, FOOTER) --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--cor-fundo);
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--cor-destaque);
+    text-decoration: none;
+}
+
+main {
+    flex-grow: 1;
+    padding: 2rem 5%;
+}
+
+.footer {
+    text-align: center;
+    padding: 1.5rem 5%;
+    font-size: 0.9rem;
+    color: var(--cor-texto-secundario);
+}
+
+/* --- MENU DE NAVEGAÇÃO --- */
+.menu-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-links a {
+    color: var(--cor-texto-principal);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu-links a:hover {
+    color: var(--cor-destaque);
+}
+
+.btn-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-texto-principal);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-texto-principal);
+    transition: transform 0.3s ease;
+}
+
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
+
+/* --- SEÇÃO DE DESTAQUE (HERO) E LAYOUT DA CALCULADORA --- */
+.main-content-calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section {
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--cor-destaque);
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-principal);
+    line-height: 1.7;
+}
+
+.calculator-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* --- DESIGN DA CALCULADORA NEUMÓRFICA --- */
+.calculator {
+    border-radius: 30px;
+    padding: 25px;
+    background: var(--cor-fundo);
+    box-shadow: var(--sombra-externa);
+    width: 100%;
+    max-width: 360px;
+}
+
+.display {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--cor-fundo);
+    box-shadow: var(--sombra-interna);
+    font-size: 2.5rem;
+    text-align: right;
+    color: var(--cor-texto-principal);
+    border: none;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.buttons button {
+    padding: 20px;
+    border-radius: 15px;
+    border: none;
+    background: var(--cor-fundo);
+    box-shadow: var(--sombra-externa);
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: inherit;
+    color: var(--cor-texto-principal);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.buttons button:active {
+    box-shadow: var(--sombra-interna);
+    color: var(--cor-destaque);
+}
+
+.buttons .operator,
+#clear {
+    color: var(--cor-destaque);
+    font-weight: 500;
+}
+
+.buttons .equal {
+    background-color: var(--cor-destaque);
+    box-shadow: none;
+    color: #fff;
+}
+.buttons .equal:active {
+    box-shadow: var(--sombra-interna);
+}
+
+/* --- CONTEÚDO AO LADO DA CALCULADORA (SIDEBAR) --- */
+.calculator-sidebar {
+    text-align: center;
+    max-width: 300px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: var(--sombra-externa);
+}
+
+.calculator-sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--cor-destaque);
+    margin-bottom: 0.5rem;
+}
+
+.calculator-sidebar p {
+    color: var(--cor-texto-principal);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.cta-button-sidebar {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--cor-fundo);
+    color: var(--cor-destaque);
+    border: 2px solid var(--cor-destaque);
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.cta-button-sidebar:hover {
+    background: var(--cor-destaque);
+    color: #fff;
+}
+
+/* --- ESTILOS DAS PÁGINAS DE CONTEÚDO GERAIS --- */
+.main-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.main-content h1 {
+    color: var(--cor-destaque);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.main-content p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.service-card {
+    background: var(--cor-fundo);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--sombra-externa);
+}
+
+/* --- ESTILOS DO FORMULÁRIO --- */
+.contact-form {
+    max-width: 100%;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    background: var(--cor-fundo);
+    box-shadow: var(--sombra-interna);
+    border: none;
+    color: var(--cor-texto-principal);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: var(--cor-destaque);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    box-shadow: 5px 5px 10px #a3b1c6, -5px -5px 10px #ffffff;
+}
+.cta-button:active {
+    box-shadow: var(--sombra-interna);
+}
+
+#form-status {
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+
+/* --- LAYOUT RESPONSIVO --- */
+
+/* AJUSTE PARA ECRÃS GRANDES (DESKTOPS) */
+@media (min-width: 992px) {
+    .calculator-layout {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .calculator-sidebar {
+        text-align: left;
+    }
+}
+
+/* AJUSTE PARA ECRÃS PEQUENOS (TABLETS E TELEMÓVEIS) */
+@media (max-width: 768px) {
+    .menu-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-fundo);
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.05);
+    }
+
+    .menu-links.active {
+        display: flex;
+    }
+
+    .btn-menu {
+        display: block;
+    }
+
+    .navbar.active .hamburger {
+        background-color: transparent;
+    }
+    .navbar.active .hamburger::before {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+    .navbar.active .hamburger::after {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+}
